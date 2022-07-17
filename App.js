@@ -1,11 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import Checkbox from './components/Checkbox';
 
 export default function App() {
+
+  const optionsindividual = [{
+    text: "Li e concordo", id: 1
+  }]
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+     
+     <Text style={styles.title}>Chechbox Individual</Text>
+
+     <Checkbox options={optionsindividual} />
+
+            <Text>Chechbox uma opção por vez</Text>
+            <Text>Chechbox múltipla escolha</Text>
     </View>
   );
 }
